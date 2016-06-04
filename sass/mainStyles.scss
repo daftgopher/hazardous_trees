@@ -6,6 +6,8 @@ $darkGreen: hsla(126, 40, 21, 100);
 $darkerGreen: hsla(126, 40, 11, 100);
 $superBrightGreen: #69FF22;
 $gotham: "Gotham A", "Gotham B";
+
+$knockout_two: "Knockout 47 A", "Knockout 47 B";
 $knockout: "Knockout 48 A", "Knockout 48 B";
 
 * {
@@ -71,10 +73,12 @@ p {
 
   h1 {
     display: inline-block;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    font-style: italic;
-    transform: translate(0, -2rem);
+    font-size: 5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: $knockout_two;
+    transform: translate(0, -1rem);
   }
 }
 
