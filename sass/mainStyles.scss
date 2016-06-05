@@ -1,0 +1,172 @@
+$black: #333333;
+$black-light: #444;
+$white: #FFFFFF;
+$lightGreen: hsla(126, 40, 31, 100);
+$darkGreen: hsla(126, 40, 21, 100);
+$darkerGreen: hsla(126, 40, 11, 100);
+$superBrightGreen: #69FF22;
+$gotham: "Gotham A", "Gotham B";
+
+$knockout_two: "Knockout 47 A", "Knockout 47 B";
+$knockout: "Knockout 48 A", "Knockout 48 B";
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: $superBrightGreen;
+}
+
+::selection {
+    background: $superBrightGreen;
+}
+
+body {
+  background: $darkGreen;
+  font-family: $gotham;
+  font-size: 16px;
+}
+
+p {
+  color: $white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $white;
+  margin: 0;
+}
+
+@mixin panel {
+  flex: 1;
+  display: flex;
+  max-height: 800px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: $white;
+  font-weight: 500;
+  letter-spacing: 0px;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 0.75rem;
+}
+
+.inlineTree {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.heading--main {
+  background: $darkerGreen;
+  padding: 2rem 0;
+  text-align: center;
+
+  h1 {
+    display: inline-block;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: $knockout_two;
+    transform: translate(0, -1rem);
+  }
+}
+
+.panels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel {
+  @include panel;
+}
+
+.panel-header {
+  color: $white;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.panel--hero {
+  @include panel;
+  background-image: linear-gradient(to bottom, $lightGreen, $darkGreen);
+  height: 100vh;
+}
+
+.panel-description {
+  flex: 1;
+  padding: 1.5rem;
+  min-width: 30vw;
+  margin: 0 auto;
+  max-width: 820px;
+}
+
+.treeGroup {
+  transform: translate(40px, 0);
+}
+
+.panel-mapArea {
+  min-height: 650px;
+  width: 70vw;
+}
+
+.panel--dark {
+  background-image: linear-gradient(to bottom, $black-light, $black);
+  min-height: 5px;
+  padding: 2rem;
+}
+
+.gaugeList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.gauge {
+  flex: 1;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+.gauge--outer {
+  fill: transparent;
+  stroke: #aaa;
+  stroke-width: 15px
+}
+
+.gauge--inner {
+  stroke-dasharray: 800px 800px;
+  stroke-dashoffset: 500px;
+  fill: transparent;
+  stroke-width: 15px;
+  stroke-linecap: round;
+}
+
+.gauge-number {
+  font-family: $knockout;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: -5.8rem;
+  margin-bottom: 3rem;
+  margin-left: 0.7rem;
+}
+
+.text-center {
+  text-align: center;
+}
