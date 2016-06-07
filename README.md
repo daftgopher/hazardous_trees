@@ -14,6 +14,7 @@ input datasets: [2015 Street Tree Census](https://data.cityofnewyork.us/Environm
 
 [Selected Facilities and Program Sites: Shapefile](https://data.cityofnewyork.us/Housing-Development/Selected-Facilities-and-Program-Sites-Shapefile/2fpa-bnsx) Parameters
 ft_decode field mapped to categories:
+
 | ft_decode                                                | category                |
 |----------------------------------------------------------|-------------------------|
 | Group Day Care - Private                                 | Daycare                 |
