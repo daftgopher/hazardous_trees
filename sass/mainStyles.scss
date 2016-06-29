@@ -4,11 +4,15 @@ $white: #FFFFFF;
 $lightGreen: hsla(126, 40, 31, 100);
 $darkGreen: hsla(126, 40, 21, 100);
 $darkerGreen: hsla(126, 40, 11, 100);
+$brightGreen: #5ff16f;
 $superBrightGreen: #69FF22;
 $gotham: "Gotham A", "Gotham B";
 
-$knockout_two: "Knockout 47 A", "Knockout 47 B";
-$knockout: "Knockout 48 A", "Knockout 48 B";
+$brown: #6f3b10;
+$brown-dark: #4e290a;
+
+$knockout_thin: "Knockout 26 A", "Knockout 26 B";
+$knockout_medium: "Knockout 28 A", "Knockout 28 B";
 
 * {
   box-sizing: border-box;
@@ -35,6 +39,15 @@ p {
 h1,h2,h3,h4,h5,h6 {
   color: $white;
   margin: 0;
+}
+
+a {
+  color: $brightGreen;
+  transition: all 0.3s;
+
+  &:hover {
+    color: scale-color($brightGreen, $lightness: 30%);
+  }
 }
 
 @mixin panel {
@@ -77,7 +90,9 @@ p {
     letter-spacing: 3px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-family: $knockout_two;
+    font-style: normal;
+    font-weight: 400;
+    font-family: $knockout_thin;
     transform: translate(0, -1rem);
   }
 }
@@ -125,7 +140,7 @@ p {
 }
 
 .panel--dark {
-  background-image: linear-gradient(to bottom, $black-light, $black);
+  background-image: linear-gradient(to bottom, $brown, $brown-dark);
   min-height: 5px;
   padding: 2rem;
 }
@@ -159,7 +174,7 @@ p {
 }
 
 .gauge-number {
-  font-family: $knockout;
+  font-family: $knockout_medium;
   font-weight: 400;
   font-size: 1.8rem;
   margin-top: -5.8rem;
