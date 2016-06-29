@@ -151,11 +151,11 @@ p {
 }
 
 .gauge--inner {
-  stroke-dasharray: 800px 800px;
-  stroke-dashoffset: 500px;
+  transition: all 1s 1s;
+  stroke-dasharray: 314px; // Perimiter of circle is 314. Calculation: Radius = 50 * 2 * 3.14
   fill: transparent;
   stroke-width: 15px;
-  stroke-linecap: round;
+  stroke-linecap: initial;
 }
 
 .gauge-number {
